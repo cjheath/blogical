@@ -18,6 +18,7 @@ module Blogical
     set :content, BLOGICAL_CONTENT_ROOT
     set :public, 'public'
     enable :raise_errors
+    enable :logging
 
     get '/blog/info' do
       "Running Blogical " # + version number

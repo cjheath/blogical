@@ -26,7 +26,7 @@ module Blogical
       end
 
       def recent(count = 3)
-        raise "Requested more articles (#{count}) than existing in repository (#{@index.size})" if count > @index.size
+        count = @index.size if count > @index.size
         @index[0..(count - 1)]
       end
 

@@ -2,10 +2,10 @@ module Blogical
   module Atom
     def self.included(app)
 
-      app.get '/feed/blog/atom.xml' do
+      app.get '/blog/atom.xml' do
 
         feed = ::Atom::Feed.new do |f|
-          f.title = 'Red Artisan - Blog'
+          f.title = self.class.feed_title
           f.links << ::Atom::Link.new(:href => self.class.url)
           f.updated = options.repository.latest.posted.to_s(:iso8601)
           f.authors << ::Atom::Person.new(:name => self.class.author)

@@ -3,7 +3,7 @@ module Blogical
     def self.included(app)
 
       # GET /blog
-      app.get %r{/blog/?} do
+      app.get %r{^/blog(/?\?.*)?/?$} do
         @posts = options.repository.paginated(Integer(params['page']))
         @pages = options.repository.total_pages
         erb :blog

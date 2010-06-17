@@ -29,6 +29,7 @@ def configure(ba)
   root = File.dirname(File.expand_path(__FILE__))
   ba.set :views, root + '/views/blogical'       # Tell Sinatra where to find the views
   # Configure things for the ATOM feed:
+  ba.set :feed_title, "My Name or Domain - Blog"
   ba.set :domain, "my.domain.name"
   ba.set :url, "http://"+ba.domain+"/blog"
   ba.set :author, "Your Name Here"
