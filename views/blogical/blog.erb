@@ -1,0 +1,17 @@
+<div class="content">
+  <% @posts.each do |post| %>
+  <div class="hentry">
+  <h2><a href="<%= post.url %>"><%=h post.title %></a></h2>
+  <div class="vcard">
+      posted by <a href="mailto:<%= post.email %>"><%= post.nickname %></a>, <span class="published"><%= h post.posted.to_s(:posted) %></span>
+  </div>
+  <%= markup File.read(post.content) %>
+  </div>
+  <% end %>
+
+  <div class="pagination">
+  <% @pages.times do |i| %>
+  <a <%= 'id="selected"' if current_page?(i + 1) %> href="/blog?page=<%= i + 1 %>"><%= i + 1 %></a>
+  <% end %>
+  </div>
+</div>

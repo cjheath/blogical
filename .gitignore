@@ -1,0 +1,7 @@
+.bundle
+bin
+gems
+logs*
+sinatra.log
+tmp/restart.txt
+vendor

@@ -1,0 +1,3 @@
+Welcome, to my new blog!
+
+My name is ..., and I'm ...

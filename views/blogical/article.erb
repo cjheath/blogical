@@ -1,0 +1,9 @@
+<div class="content">
+  <div class="hentry">
+  <h2><%=h @post.title %></h2>
+  <div class="vcard">
+    posted by <a href="mailto:<%= @post.email %>"><%= @post.nickname %></a>, <span class="published"><%=h @post.posted.to_s(:posted) %></span>
+  </div>
+  <%= markup(File.read(@post.content)) %>
+  </div>
+</div>
