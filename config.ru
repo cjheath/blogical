@@ -32,7 +32,7 @@ def configure(ba)
   ba.set :feed_title, "My Name or Domain - Blog"
   ba.set :domain, "my.domain.name"
   ba.set :url, "http://"+ba.domain+"/blog"
-  ba.set :author, "Your Name Here"
+  ba.set :full_name, "Your Name Here"
   # Configure the name and email address for display:
   ba.set :nickname, "nickname"
   ba.set :email, "your_email@domain.com"

@@ -8,7 +8,7 @@ module Blogical
           f.title = self.class.feed_title
           f.links << ::Atom::Link.new(:href => self.class.url)
           f.updated = options.repository.latest.posted.to_s(:iso8601)
-          f.authors << ::Atom::Person.new(:name => self.class.author)
+          f.authors << ::Atom::Person.new(:name => self.class.full_name)
           f.id = 'tag:'+self.class.domain+',2010:blogical/blog'
 
           options.repository.recent(15).each do |post|
