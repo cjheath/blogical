@@ -1,4 +1,5 @@
-= Blogical
+Blogical
+========
 
 http://github.com/cjheath/blogical
 
@@ -9,10 +10,12 @@ limited hosted environments, including free Heroku server and on DreamHost.
 
 Blogical does not support comments, and is built for only a single author.
 
-== Copyright
+Copyright
+---------
 
 Blogical is available under the MIT license.
 
-== Credits
+Credits
+-------
 
 Blogical is derived from Marcus Crafter's "jd" code.
