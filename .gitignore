@@ -5,3 +5,4 @@ logs*
 sinatra.log
 tmp/restart.txt
 vendor
+*.gem
